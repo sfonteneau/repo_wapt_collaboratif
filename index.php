@@ -5,7 +5,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 
-<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Wapt Dépôt</title><link rel="stylesheet" href="style.css" type="text/css" media="screen"><meta http-equiv="content-type" content="text/html; charset=utf-8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"></head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Wapt DÃ©pÃ´t</title><link rel="stylesheet" href="style.css" type="text/css" media="screen"><meta http-equiv="content-type" content="text/html; charset=utf-8"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"></head>
 <body>
 <div style="text-align: center;">
 <table style="text-align: left; width: 750px; margin-left: auto; margin-right: auto; height: 863px; background-color: white;" border="0" cellpadding="0" cellspacing="0">
@@ -32,10 +32,10 @@ function uploadFile(){
 	ajax.send(formdata);
 }
 function progressHandler(event){
-	_("loaded_n_total").innerHTML = "Téléchargement de "+event.loaded+" bytes sur "+event.total+ " bytes";
+	_("loaded_n_total").innerHTML = "TÃ©lÃ©chargement de "+event.loaded+" bytes sur "+event.total+ " bytes";
 	var percent = (event.loaded / event.total) * 100;
 	_("progressBar").value = Math.round(percent);
-	_("status").innerHTML = Math.round(percent)+"% Téléchargement... Merci de patienter";
+	_("status").innerHTML = Math.round(percent)+"% TÃ©lÃ©chargement... Merci de patienter";
 }
 function completeHandler(event){
 	_("status").innerHTML = event.target.responseText;
@@ -70,7 +70,7 @@ function abortHandler(event){
       </div>
 
 <br>
-   <span style="color: rgb(0, 0, 0); font-size: medium; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; font-family: Arial; font-weight: bold;"><a href="/wapt/?C=M;O=D" style="color: rgb(102, 51, 51);">https://user:password@wapt.reseaux85.fr/wapt</a></span><br>
+   <span style="color: rgb(0, 0, 0); font-size: medium; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; font-family: Arial; font-weight: bold;"><a href="/wapt/?C=M;O=D" style="color: rgb(102, 51, 51);">https://user:password@wapt.link.fr/wapt</a></span><br>
 
       <div class="" style="text-align: center; background-color: white;">
 <br>
@@ -78,7 +78,7 @@ function abortHandler(event){
 <br>
 <br>
 <b>
-Transfère de fichier wapt vers le dépôt:</b>
+TransfÃ¨re de fichier wapt vers le dÃ©pÃ´t:</b>
  <br> 
 <br>
 
@@ -100,7 +100,7 @@ Transfère de fichier wapt vers le dépôt:</b>
 <?php 
 
 setlocale (LC_TIME, 'fr_FR.utf8','fra');
-echo '<fieldset><legend><b>Supression et téléchargement de fichier wapt du dépôt</b></legend><br>';
+echo '<fieldset><legend><b>Supression et tÃ©lÃ©chargement de fichier wapt du dÃ©pÃ´t</b></legend><br>';
 
 $adresse = "./wapt/";
 if(isset($_GET['nom']))
@@ -112,8 +112,8 @@ if(isset($_GET['nom']))
      if ((in_array($extensionFichier, $extensionsAutorisees))) {
           unlink($nom);
           exec("/usr/bin/python /opt/wapt/wapt-scanpackages.py ./wapt/");
-          echo '<b><FONT color="red">Le fichier "'.$_GET['nom'].'" a été éffacé !</FONT></b></a><br><br>';
-          echo "La regénération du fichier Packages a été lancée, cela peut prendre plusieurs minutes ...<br><br>";
+          echo '<b><FONT color="red">Le fichier "'.$_GET['nom'].'" a Ã©tÃ© Ã©ffacÃ© !</FONT></b></a><br><br>';
+          echo "La regÃ©nÃ©ration du fichier Packages a Ã©tÃ© lancÃ©e, cela peut prendre plusieurs minutes ...<br><br>";
           sleep(1);
           echo "<script type='text/javascript'>document.location.replace('index.php');</script>";
      }
@@ -143,7 +143,7 @@ else
 {$taille = $taille . " o";}
 
 if($taille==0) {$taille="-";}
-  echo '<div style="text-align:left;"> <a id="mybutton" href="/wapt/'.$Fichier.'" title="Télécharger"><button>Télécharger</button></a>                     <a id="mybutton" href="index.php?nom='.$Fichier.'" onclick="return(confirm(\'Voulez vous confirmez la supression de '.$Fichier.' ?\'))"   ><button>Supprimer</button></a>               <a target="_blank">'.$Fichier.'</a></div>  <div style="text-align:right;"><FONT color="grey"><a target="_blank">'.$taille.'</a>&nbsp; |    <a target="_blank">'.$datemodify.'&nbsp;</a></FONT></div><br>';
+  echo '<div style="text-align:left;"> <a id="mybutton" href="/wapt/'.$Fichier.'" title="TÃ©lÃ©charger"><button>TÃ©lÃ©charger</button></a>                     <a id="mybutton" href="index.php?nom='.$Fichier.'" onclick="return(confirm(\'Voulez vous confirmez la supression de '.$Fichier.' ?\'))"   ><button>Supprimer</button></a>               <a target="_blank">'.$Fichier.'</a></div>  <div style="text-align:right;"><FONT color="grey"><a target="_blank">'.$taille.'</a>&nbsp; |    <a target="_blank">'.$datemodify.'&nbsp;</a></FONT></div><br>';
 
                                                                }
 
