@@ -143,7 +143,7 @@ else
 {$taille = $taille . " o";}
 
 if($taille==0) {$taille="-";}
-  echo '<div style="text-align:left;"> <a id="mybutton" href="/wapt/'.$Fichier.'" title="Télécharger"><button>Télécharger</button></a>                     <a id="mybutton" href="index.php?nom='.$Fichier.'" onclick="return(confirm(\'Voulez vous confirmez la supression de '.$Fichier.' ?\'))"   ><button>Supprimer</button></a>               <a target="_blank">'.$Fichier.'</a></div>  <div style="text-align:right;"><FONT color="grey"><a target="_blank">'.$taille.'</a>&nbsp; |    <a target="_blank">'.$datemodify.'&nbsp;</a></FONT></div><br>';
+  echo '<div style="float:left;"> <a id="mybutton" href="/wapt/'.$Fichier.'" title="Télécharger"><button>Télécharger</button></a>                     <a id="mybutton" href="index.php?nom='.$Fichier.'" onclick="return(confirm(\'Voulez vous confirmez la supression de '.$Fichier.' ?\'))"   ><button>Supprimer</button></a>               <a target="_blank">'.$Fichier.'</a></div>  <div style="float:right;"><FONT color="grey"><a target="_blank">'.$taille.'</a>&nbsp; |    <a target="_blank">'.$datemodify.'&nbsp;</a></FONT></div><br><br><br>';
 
                                                                }
 
